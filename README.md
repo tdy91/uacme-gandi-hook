@@ -18,9 +18,11 @@ The **uacme** [github project][uacme-github] is a lightweight client for the [RF
 
 Refer to [uacme manual][uacme-manual] and [README.md][uacme-github] for hook script usage with uacme.
 
-All files of this repository have to be placed in the same folder
+gandi_nsupdate.sh and gandi_api_functions.inc files have to be placed in the same folder as other uacme scripts as uacme.ash or nsupdate.sh, for instance /usr/share/uacme folder or /usr/local/share/uacme folder depending of the Linux distribution; README.md file may be copy in the same folder, renaming it to gandi_api_readme for instance.
 
+gandi_api_key is expected to be copy in folder defined by GANDI_API_KEY_FILE variable of gandi_nsupdate.sh script (default /root folder); if this variable is not defined, gandi_api_key is expected to be copy in the same folder gandi_nsupdate.sh. 
 
+ 
 ##### gandi_api_key - API key file
 
 This file must contain gandi.net API key of your user account.
