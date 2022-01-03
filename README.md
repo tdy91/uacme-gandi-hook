@@ -43,6 +43,19 @@ Note : gandi_api_functions.inc file contains specific gandi.net functions; it is
 
 gandi_nsupdate.sh hook script is designed to be used as nsupdate.sh script described in [uacme manual][uacme-manual] and [README.md][uacme-github].
 
+Example of uacme command line used for test purpose (--staging option, using Let's Encrypt staging URL instead of production URL) to automate Let'Encrypt certficate updates using DNS-01 challenge for site1.example.com DNS Common Name with DNS Alternative Names site2.example.com and site3.example.com.
+```
+uacme --staging -v -c /etc/config/uacme.d \
+      -h /usr/share/uacme/gandi_nsupdate.sh \
+      issue site1.example.com site2.example.com site3.example.com
+```
+
+Example of uacme command line used for production purpose to automate Let'Encrypt certficate updates using DNS-01 challenge for DNS Common Name www.your.domain.com
+```
+uacme -v -c /etc/config/uacme.d \
+      -h /usr/share/uacme/gandi_nsupdate.sh \
+      issue www.your.domain.com
+```
 
 
 

@@ -119,7 +119,7 @@ ns_update()
     res=1
     while [ $res -ne 0 ]; do
         if [ $count -eq 0 ]; then
-            ns_doupdate "$fqhn" "$challenge"
+            gandi_ns_doupdate "$fqhn" "$challenge"
             res=$?
             [ $res -eq 0 ] || break
         else
