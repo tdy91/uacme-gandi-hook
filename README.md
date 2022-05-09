@@ -41,7 +41,8 @@ This hook script must be must be made executable, using following command :
 ```
 chmod +x gandi_nsupdate.sh
 ```
-Note : gandi_api_functions.inc file contains specific gandi.net functions; it is sourced by the hook script gandi_nsupdate.sh.
+**Note :** gandi_api_functions.inc file contains specific gandi.net functions; it is sourced by the hook script gandi_nsupdate.sh and some gandi specific variables 
+may have to be changed if necessary, such as __GANDI_DNS_SERVERS which defines gandi DNS or __ENDPOINT which defines gandi API base url.
 
 gandi_nsupdate.sh hook script is designed to be used as nsupdate.sh script described in [uacme manual][uacme-manual] and [README.md][uacme-github].
 

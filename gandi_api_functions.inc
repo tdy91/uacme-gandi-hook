@@ -16,6 +16,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+__GANDI_DNS_SERVERS="ns-202-a.gandi.net ns-132-b.gandi.net ns-44-c.gandi.net"
 __ENDPOINT="https://dns.api.gandi.net/api/v5"
 __RRTYPE="TXT"
 __DEFAULT_TTL=600

@@ -79,10 +79,12 @@ ns_ispresent()
     local fqhn="$1"
     local expect="$2"
     local domain=$(ns_getdomain "$fqhn")
-    local nameservers=$(ns_getall "$domain")
+    local nameservers=$__GANDI_DNS_SERVERS
+    if [ "$nameservers" == "" ]; then
+       nameservers=$(ns_getall "$domain")
+    fi
     local res
     local ret
-
     for NS in $nameservers; do
         OLDIFS="${IFS}"
         IFS='.'
